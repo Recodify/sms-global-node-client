@@ -1,6 +1,6 @@
 var sms = require('./lib/wrapper');
 
-var wrapper = new sms.wrapper('2237275ba354517bdbd2477b7266e3c1', 'ccbb84e115a66eb2fc83834b8c0f31a3');
+var wrapper = new sms.wrapper('8054c0ec196e62be6e85faf406032967', '0db8cc05b02d2a6bda3fd32ea8789a53');
 wrapper.get('group',  function(body){
      
 });
