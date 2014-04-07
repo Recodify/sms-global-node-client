@@ -1,17 +1,21 @@
 var sms = require('./lib/wrapper');
-/*
+
+/* GET EXAMPLE
 var wrapper = new sms.wrapper('null', 'null');
 wrapper.get('contact', null,  function(body){
 	console.log(body);
 });*/
 
-var wrapper = new sms.wrapper('8054c0ec196e62be6e85faf406032967', '0db8cc05b02d2a6bda3fd32ea8789a53');
+// POST EXAMPLE
+var wrapper = new sms.wrapper('YOUR KEY', 'YOUR PASSWORD');
 var message = {
 	origin: "test",
-	destination: "447850229403",
-	message: "anther bloody message"
+	destination: "447850229333",
+	message: "anther message"
 }
 
-wrapper.post('sms', null, message, function(body){
-	console.log(body);
+wrapper.post('sms', null, message, function(statusCode, body){
+	console.log("http status: " + statusCode);
+	if (body)
+		console.log("body: " + body);
 });
